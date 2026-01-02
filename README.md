@@ -1,1 +1,64 @@
-# Parking-Slot-Recommendation-System
+# Parking Slot Recommendation System (C)
+
+## Overview
+This project is a console-based Parking Slot Recommendation System developed in C.  
+It recommends the nearest available parking slot to a user based on the entry point using Breadth First Search (BFS).
+
+The system models a realistic parking layout with roads and parking slots and maintains slot status across executions using file handling.
+
+---
+
+## Key Features
+- Nearest parking slot recommendation
+- User-controlled slot selection
+- Realistic slot IDs (row–column based, e.g., 11, 23, 35)
+- Clear separation of roads and parking slots
+- Persistent parking state using file handling
+- Modular and well-structured C code
+
+---
+
+## Data Structures & Algorithms
+- 2D Arrays – parking layout
+- Queue – BFS traversal
+- Graph (implicit grid graph)
+- File handling – slot persistence
+- Algorithm used: Breadth First Search (BFS)
+
+---
+
+## Parking Model
+- Grid size: 9 × 9
+- Total slots: 15
+- Entry point: top-left corner
+- Exit point: bottom-right corner
+- Slots placed beside driving lanes
+
+---
+
+## Project Structure
+Parking-Slot-Recommendation-System/
+├── main.c
+├── data/
+│ ├── data.h
+│ ├── state_manager.c
+│ └── state_manager.h
+├── layout/
+│ ├── parking_layout.c
+│ └── parking_layout.h
+├── algorithm/
+│ └── bfs.c
+├── logic/
+│ └── parking_manager.c
+├── utils/
+│ └── display.c
+└── data/parking_state.txt
+
+
+---
+
+## Compile & Run
+```bash
+gcc main.c layout/parking_layout.c algorithm/bfs.c logic/parking_manager.c utils/display.c data/state_manager.c -o parking
+
+run: .\parking
