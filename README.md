@@ -37,22 +37,34 @@ The system models a realistic parking layout with roads and parking slots and ma
 ---
 
 ## Project Structure
+
+
+```text
 Parking-Slot-Recommendation-System/
-├── main.c
-├── data/
-│ ├── data.h
-│ ├── state_manager.c
-│ └── state_manager.h
-├── layout/
-│ ├── parking_layout.c
-│ └── parking_layout.h
+│
+├── main.c                     # Main driver program
+│
 ├── algorithm/
-│ └── bfs.c
+│   └── bfs.c                  # BFS pathfinding algorithm
+│
+├── data/
+│   ├── data.h                 # Common definitions and constants
+│   ├── state_manager.c        # Load/save parking slot state
+│   ├── state_manager.h
+│   └── parking_state.txt      # Persistent slot data
+│
+├── layout/
+│   ├── parking_layout.c       # Parking grid layout & entry/exit
+│   └── parking_layout.h
+│
 ├── logic/
-│ └── parking_manager.c
+│   └── parking_manager.c      # Slot recommendation & management
+│
 ├── utils/
-│ └── display.c
-└── data/parking_state.txt
+│   └── display.c              # UI display functions
+│
+└── README.md
+
 
 
 ---
